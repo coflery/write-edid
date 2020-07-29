@@ -64,7 +64,7 @@ fi
 IFSBAK=$IFS
 export IFS=$' \n\t\r'
 # some field
-edidLength=128
+edidLength=256
 count=0
 chipAddress="0x50"
 
@@ -88,7 +88,7 @@ do
   # increment counter
   count=$(($count+1))
   # sleep a moment
-  sleep 0.1s
+  sleep 0.001s
 done
 exec 0<&3
 
