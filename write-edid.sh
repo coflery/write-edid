@@ -78,7 +78,7 @@ exec 3<&0
 exec 0<"$FILE"
 for chunk in $(cat $FILE)
 do
-  # if we have reached 128 byte, stop
+  # if we have reached 128 or 256 or 512 byte, stop
   if [ "$count" -eq "$edidLength" ]; then
     echo "done"
     break
